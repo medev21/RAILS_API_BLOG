@@ -1,7 +1,11 @@
-# README
+#README
 
 A rails blog with angular js as front end
 
-## Technologies
+##Technologies
 
 Ruby on Rails, AngularJS
+
+##Status
+
+Work in progress...
