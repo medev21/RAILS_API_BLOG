@@ -12,7 +12,7 @@ class Api::V1::PostsController < ApplicationController
   render json: Post.find(params[:id])
  end
 
- def created
+ def create
    @post = Post.new(post_params)
    if @post.save
      render status: 200, json: {
@@ -24,6 +24,30 @@ class Api::V1::PostsController < ApplicationController
        errors: post.errors
      }.to_json
    end
+ end
+
+ def update
+   @post = Post.find(params[:id])
+
+   if @post.update(post_params)
+     render status: 200, json: {
+       message: "succefully updated post",
+       post: post
+     }.to_json
+   else
+     render status: 422, json: {
+       message: "failed to update post",
+       post: post
+     }.to_json
+   end
+ end
+
+ def destroy
+   @post = Post.find(params[:id])
+   @post.destroy
+   render status: 200, json: {
+     message: "post deleted"
+   }.to_json
  end
 
  private
