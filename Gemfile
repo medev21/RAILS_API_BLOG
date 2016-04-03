@@ -29,6 +29,7 @@ gem 'better_errors', '~> 2.1', '>= 2.1.1', group: :development
 gem 'meta_request', '~> 0.4.0', group: :development
 gem 'hirb', '~> 0.7.3'
 gem 'responders', '~> 2.1', '>= 2.1.2'
+gem 'bower-rails', '~> 0.10.0'
 ###################################
 
 # Use ActiveModel has_secure_password
