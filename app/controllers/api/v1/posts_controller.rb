@@ -13,7 +13,7 @@ class Api::V1::PostsController < ApplicationController
  end
 
  def create
-   @post = Post.new(post_params)
+   @post = Post.create(post_params)
    if @post.save
      render status: 200, json: {
        message: "successfully create a post",
