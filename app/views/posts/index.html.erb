@@ -1,6 +1,18 @@
 <div ng-controller = "MainCtrl">
+
+  <form ng-submit = "savePost()">
+    <input type="text" ng-model = "newPost.title" placeholder="place post title" class="form-control" autofocus>
+    <input type="text" ng-model = "newPost.description" placeholder="place post description" class="form-control" autofocus>
+    <input type="Submit" value="Add post">
+  </form>
+
   <ul>
-    <li ng-repeat = "post in posts">{{post.title}}</li>
+    <li ng-repeat = "post in posts">
+      <ul>
+        <li>{{post.title}}</li>
+        <li>{{post.description}}</li>
+      </ul>
+    </li>
   </ul>
 
 </div>
