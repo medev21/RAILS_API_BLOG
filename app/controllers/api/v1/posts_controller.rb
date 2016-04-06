@@ -17,11 +17,11 @@ class Api::V1::PostsController < ApplicationController
    if @post.save
      render status: 200, json: {
        message: "successfully create a post",
-       post: post
+       post: @post
      }.to_json
    else
      render status: 422, json: {
-       errors: post.errors
+       errors: @post.errors
      }.to_json
    end
  end
@@ -32,12 +32,12 @@ class Api::V1::PostsController < ApplicationController
    if @post.update(post_params)
      render status: 200, json: {
        message: "succefully updated post",
-       post: post
+       post: @post
      }.to_json
    else
      render status: 422, json: {
        message: "failed to update post",
-       post: post
+       post: @post
      }.to_json
    end
  end
@@ -52,7 +52,7 @@ class Api::V1::PostsController < ApplicationController
 
  private
   def post_params
-    params.require(:posts).permit(:title, :description)
+    params.require(:post).permit(:title, :description)
   end
 
   # def find_post

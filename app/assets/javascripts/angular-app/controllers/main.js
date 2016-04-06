@@ -4,13 +4,14 @@ angular.module('app')
 
 
         $scope.posts = Post.query();
-        // $scope.newPost = new Post();
+        $scope.newPost = new Post();
 
-        $scope.addPost = function(){
-          var post = Post.save($scope.newPost);
+        $scope.addPost = function(post){
           $scope.posts.push(post);
 
-          $scope.newPost = '';
+          post.$save();
+
+          $scope.newPost = new Post();
         }
 
        });

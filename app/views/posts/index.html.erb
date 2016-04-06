@@ -1,6 +1,6 @@
 <div ng-controller = "MainCtrl">
 
-  <form ng-submit = "addPost()">
+  <form ng-submit = "addPost(newPost)">
     <input type="text" ng-model = "newPost.title" placeholder="place post title" class="form-control" autofocus>
     <input type="text" ng-model = "newPost.description" placeholder="place post description" class="form-control" autofocus>
     <input type="Submit" value="Add post">
