@@ -30,6 +30,7 @@ gem 'meta_request', '~> 0.4.0', group: :development
 gem 'hirb', '~> 0.7.3'
 gem 'responders', '~> 2.1', '>= 2.1.2'
 gem 'bower-rails', '~> 0.10.0'
+gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 ###################################
 
 # Use ActiveModel has_secure_password
