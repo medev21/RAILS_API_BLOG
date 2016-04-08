@@ -4,7 +4,7 @@ class Api::V1::PostsController < ApplicationController
 
  def index
   #  respond_with(Post.all.order("created_at DESC"))
-  render json: Post.all.order("created_at DESC")
+  render json: Post.all.order("id DESC")
  end
 
  def show
