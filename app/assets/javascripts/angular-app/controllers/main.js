@@ -13,6 +13,7 @@ angular.module('app')
           $scope.posts.push(post);
           console.log($scope.posts);
           $scope.newPost = new Post();
+          $scope.posts = Post.query();
         }
 
         //destroying a post

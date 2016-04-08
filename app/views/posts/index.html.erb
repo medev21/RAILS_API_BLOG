@@ -7,7 +7,7 @@
   </form>
 
   <ul>
-    <li ng-repeat = "post in posts track by $index">
+    <li ng-repeat = "post in posts track by post.id">
       <ul>
         <li>{{post.title}}</li>
         <li>{{post.description}}</li>
