@@ -18,10 +18,19 @@
   </ul> -->
 
   <div class="" ng-repeat = "post in posts track by post.id">
-    <label ng-hide = "editing" >{{post.title}}</label>
-    <input type="text" ng-show = "editing" ng-model="post.title">
+    <div class="row" style="margin: 0;">
+      <label ng-click="editing = !editing" ng-hide="editing" >{{post.title}}</label>
+      <input type="text" ng-blur="editing = false" ng-show = "editing" ng-model="post.title">
+    </div>
+
+    <!-- <div class="row" style="margin: 0;">
+      <label ng-click = "editing = !editing" ng-hide="editing" >{{post.description}}</label>
+      <input type="text" ng-blur="editing = false" ng-show="editing" ng-model="post.description">
+    </div> -->
+
     <div class="actions">
-      <a class="btn btn-default" ng-click = "editing = !editing">Edit</a>
+      <!-- <a class="btn btn-default" ng-click = "editing = !editing">Edit</a> -->
+      <a class="btn btn-default" ng-click = "saveEditedPost($index)">Save</a>
       <a class="btn btn-danger" ng-click="removePost($index)">Remove</a>
     </div>
   </div>

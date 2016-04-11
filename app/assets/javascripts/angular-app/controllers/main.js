@@ -24,7 +24,11 @@ angular.module('app')
           $scope.posts.splice(index, 1); //update $scope.posts by removing deleted post
         }
 
-        $scope.editPost = function(post){
+        //updating a post
+        $scope.saveEditedPost = function(index){
+          post = $scope.posts[index]; //find post w/ index from $scope.posts and set that into a var
+          console.log(post);
+          Post.update(post); //update the post in the backend
 
         }
 
