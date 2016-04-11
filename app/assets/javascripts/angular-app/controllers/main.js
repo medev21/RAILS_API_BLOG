@@ -24,4 +24,8 @@ angular.module('app')
           $scope.posts.splice(index, 1); //update $scope.posts by removing deleted post
         }
 
+        $scope.editPost = function(post){
+
+        }
+
       }]);
