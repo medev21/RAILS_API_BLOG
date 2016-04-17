@@ -7,7 +7,10 @@
   <%= csrf_meta_tags %>
 </head>
 <body ng-app="app">
-
+  <div class="row" style="margin: 0;">
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+  </div>
 <%= yield %>
 
 </body>

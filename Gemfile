@@ -31,6 +31,7 @@ gem 'hirb', '~> 0.7.3'
 gem 'responders', '~> 2.1', '>= 2.1.2'
 gem 'bower-rails', '~> 0.10.0'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
+gem 'devise', '~> 3.5', '>= 3.5.6'
 ###################################
 
 # Use ActiveModel has_secure_password
