@@ -32,6 +32,9 @@ gem 'responders', '~> 2.1', '>= 2.1.2'
 gem 'bower-rails', '~> 0.10.0'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 gem 'devise', '~> 3.5', '>= 3.5.6'
+gem 'devise_token_auth', '~> 0.1.37'
+gem 'omniauth-linkedin-oauth2'
+gem 'omniauth-facebook'
 ###################################
 
 # Use ActiveModel has_secure_password
